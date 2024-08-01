@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Details Recorder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Travel Details Recorder</h1>
+        <form id="travelForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Don't want to share">Don't want to share</option>
+            </select><br>
+
+            <label for="travelPreference">Travel Preference:</label>
+            <select id="travelPreference" name="travelPreference" multiple required>
+                <option value="Solo">Solo</option>
+                <option value="Couple">Couple</option>
+                <option value="Family">Family</option>
+                <option value="Group">Group</option>
+            </select><br>
+
+            <label for="travelInterest">Travel Interest:</label>
+            <select id="travelInterest" name="travelInterest" multiple required>
+                <option value="Mountains">Mountains</option>
+                <option value="Beaches">Beaches</option>
+                <option value="Spiritual">Spiritual</option>
+                <option value="Others">Others</option>
+            </select><br>
+
+            <label for="iconicPlace">Most Iconic Place Visited:</label>
+            <input type="text" id="iconicPlace" name="iconicPlace" required><br>
+
+            <label for="placeToVisitAgain">Any Place You Want to Visit Again:</label>
+            <input type="text" id="placeToVisitAgain" name="placeToVisitAgain"><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
