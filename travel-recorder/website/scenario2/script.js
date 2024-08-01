@@ -1,29 +1,25 @@
-document.getElementById('travelForm').addEventListener('submit', function(e) {
+document.getElementById('userForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const name = document.getElementById('name').value;
     const age = document.getElementById('age').value;
-    const gender = document.getElementById('gender').value;
-
-    const travelPreference = Array.from(document.getElementById('travelPreference').selectedOptions).map(option => option.value);
-    const travelInterest = Array.from(document.getElementById('travelInterest').selectedOptions).map(option => option.value);
-
+    const travelPreference = document.getElementById('travelPreference').value;
+    const travelInterest = document.getElementById('travelInterest').value;   
     const iconicPlace = document.getElementById('iconicPlace').value;
-    const placeToVisitAgain = document.getElementById('placeToVisitAgain').value;
+    const revisit = document.getElementById('revisit').value;
 
     const userDetails = {
         name: name,
         age: age,
-        gender: gender,
         travelPreference: travelPreference,
         travelInterest: travelInterest,
         iconicPlace: iconicPlace,
-        placeToVisitAgain: placeToVisitAgain
+        revisit: revisit
     };
 
-    console.log('Submitting user details:', userDetails);
+    console.log('User Details:', userDetails);
 
-    fetch('https://<your-api-id>.execute-api.<your-region>.amazonaws.com/prod/user', {
+    fetch('https://jxvnf7wcd3.execute-api.ap-south-1.amazonaws.com/test/user', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -39,11 +35,11 @@ document.getElementById('travelForm').addEventListener('submit', function(e) {
     })
     .then(data => {
         console.log('Success:', data);
-        alert('User details submitted successfully!');
-        document.getElementById('travelForm').reset();
+        alert('Travel details submitted successfully!');
+        document.getElementById('userForm').reset();
     })
     .catch((error) => {
         console.error('Error:', error);
-        alert('Failed to submit user details!');
+        alert('Failed to submit Travel details!');
     });
 });

@@ -2,15 +2,19 @@ document.getElementById('userForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const name = document.getElementById('name').value;
-    const hobby = document.getElementById('hobby').value;
-    const travelInterest = document.getElementById('travelInterest').value;
+    const age = document.getElementById('age').value;
+    const travelPreference = document.getElementById('travelPreference').value;
+    const travelInterest = document.getElementById('travelInterest').value;   
     const iconicPlace = document.getElementById('iconicPlace').value;
+    const revisit = document.getElementById('revisit').value;
 
     const userDetails = {
         name: name,
-        hobby: hobby,
+        age: age,
+        travelPreference: travelPreference,
         travelInterest: travelInterest,
-        iconicPlace: iconicPlace
+        iconicPlace: iconicPlace,
+        revisit: revisit
     };
 
     console.log('User Details:', userDetails);
@@ -18,6 +22,6 @@ document.getElementById('userForm').addEventListener('submit', function(e) {
     // Here, you will make an API call to save the user details
     // For now, we'll just log the details to the console
 
-    alert('User details submitted successfully!');
+    alert('Travel details submitted successfully!');
     document.getElementById('userForm').reset();
 });
