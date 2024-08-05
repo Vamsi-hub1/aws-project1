@@ -47,9 +47,9 @@ git clone <this repo URL>
 - Go to permissions tab in bucket and Set the bucket policy to allow public access.
 - Go to properties tab in bucket and Configure the bucket for static website hosting. Set index.html as the default document and error.html as error page.
 
-3. Now try to access the static website using the AWS S3 URL from your browser. (you can see the URL in static website property itself). You should eb able to see a webpage asking for some of the details.
+3. Now try to access the static website using the AWS S3 URL from your browser. (you can see the URL in static website property itself). You should be able to see a webpage asking for some of the details.
 
-In this scenario, we just created a webpage and fillign the details, but these details are not stored anywhere. 
+In this scenario, we just created a webpage and filled in the details, but these details are not stored anywhere. 
 
 #### Scenario 2
 
@@ -57,7 +57,7 @@ Now we are going to store the data filled in the form to a dynamoDB table. This 
 
 _1. Create DynamoDB Table_
 - Go to the AWS DynamoDB console.
-- Create a table named UserDetails with UserId as the partition key.
+- Create a table named "UserDetails" with "UserId" as the partition key.
 - Keep all other things as is and create the table.
 
 _2. Create Lambda Function_
